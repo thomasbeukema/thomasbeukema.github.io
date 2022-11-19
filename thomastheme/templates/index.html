@@ -1,32 +1,45 @@
-{% block content %}
-<section id="content">
-    {% block content_title %}
-    <h2>All articles</h2>
-    {% endblock %}
+<!DOCTYPE html>
+<html lang="{% block html_lang %}{{ DEFAULT_LANG }}{% endblock html_lang %}">
 
-    <ol id="post-list">
-        {% for article in articles_page.object_list %}
-        <li>
-            <article class="hentry">
-                <header>
-                    <h2 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
-                            title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
-                </header>
-                <footer class="post-info">
-                    <time class="published" datetime="{{ article.date.isoformat() }}"> {{ article.locale_date }} </time>
-                    <address class="vcard author">By
-                        {% for author in article.authors %}
-                        <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
-                        {% endfor %}
-                    </address>
-                </footer><!-- /.post-info -->
-                <div class="entry-content"> {{ article.summary }} </div><!-- /.entry-content -->
-            </article>
-        </li>
-        {% endfor %}
-    </ol><!-- /#posts-list -->
-    {% if articles_page.has_other_pages() %}
-    {% include 'pagination.html' %}
-    {% endif %}
-</section><!-- /#content -->
-{% endblock content %}
+<head>
+    {% block head %}
+    <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/main.css" type="text/css" />
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/home.css" type="text/css" />
+    {% endblock head %}
+</head>
+
+<body>
+    {% include 'navbar.html' %}
+    <div id="container">
+        <div class="left">
+            <div id="info">
+                <div id="name">
+                    <span id="first-name">Thomas</span>
+                    <br>
+                    <span id="last-name">Beukema</span>
+                </div>
+                <div id="titles">
+                    <ul>
+                        <li>Information Science @ Utrecht University</li>
+                        <li>Cloud Engineer @ VodafoneZiggo</li>
+                        <li>Entrepreneur @ Terrasboot</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div>
+                <div id="portrait">
+                    <img src="{{ SITEURL }}/images/thomas.png" alt="" srcset="">
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

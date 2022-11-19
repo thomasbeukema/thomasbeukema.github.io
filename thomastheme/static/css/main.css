@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:opsz@6..72&family=Rokkitt&display=swap');
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Newsreader';
+}
+
+body {
+    background-color: #EEDFD2;
+    height: 100vh;
+}
+
+main {
+    padding: 2rem;
+}
