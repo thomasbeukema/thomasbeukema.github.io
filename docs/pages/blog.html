@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>thomasbeukema.me - Blog</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/theme/css/main.css" type="text/css" />
+</head>
+
+<body>
+<link rel="stylesheet" href="/theme/css/navbar.css">
+
+<div id="navbar">
+    <a href="/">
+        <div id="logo">T</div>
+    </a>
+    <div id="nav-content">
+        <ul>
+            <li><a href="/pages/about.html">About</a></li>
+            <li><a href="/pages/blog.html">Blog</a></li>
+            <li><a href="/pages/contact.html">Contact</a></li>
+        </ul>
+    </div>
+</div>    <main>
+<link rel="stylesheet" href="/theme/css/page.css" type="text/css" />
+<link rel="stylesheet" href="/theme/css/blog.css" type="text/css" />
+<div class="left">
+    <h1 id="title">Blog</h1>
+</div>
+<div class="right">
+    <div class="article">
+        <a href="/the-making-of-my-blog.html">
+            <div>
+                <h1>The making of: my blog.</h1>
+                <span>Mon 21 November 2022</span>
+                <br>
+                <span>Category: tech</span>
+                <p><p>How and why I started this website.</p></p>
+            </div>
+        </a>
+    </div>
+</div>
+
+
+    </main>
+</body>
+<footer>
+    &copy; <span id="year"></span>
+    Thomas Beukema
+</footer>
+
+<script>
+    document.getElementById('year').innerHTML = new Date().getFullYear().toString();
+</script>
+
+</html>
