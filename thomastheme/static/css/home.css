@@ -1,0 +1,147 @@
+@media only screen and (min-width: 992px) {
+
+    html,
+    body {
+        overflow-y: hidden;
+    }
+
+    #container {
+        height: 95%;
+    }
+
+    .left {
+        height: 95%;
+        float: left;
+        padding-left: 2rem;
+        width: 40%;
+    }
+
+    .right {
+        height: 95%;
+        float: right;
+        padding-top: 2rem;
+        padding-right: 2rem;
+        width: 40%;
+    }
+
+    #info {
+        font-family: 'Rokkitt';
+        font-size: 10rem;
+        display: inline-block;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    #last-name {
+        position: relative;
+        left: 5vw;
+    }
+
+    #titles {
+        font-size: 1.75rem;
+        position: relative;
+        text-align: right;
+        left: 5vw;
+    }
+
+    #titles ul {
+        list-style-type: none;
+    }
+
+    .right>div {
+        position: relative;
+        top: 40%;
+        transform: translateY(-50%);
+    }
+
+    #portrait {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1rem;
+        border-radius: 50%;
+        overflow: hidden;
+        height: 25rem;
+        width: 25rem;
+    }
+
+    #portrait img {
+        width: 80%;
+        float: right;
+        filter: sepia(100%) opacity(95%) brightness(80%) saturate(80%);
+    }
+
+    #content {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%;
+        text-align: right;
+        font-size: 1.25rem;
+        text-align: justify;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+
+
+    #info {
+        font-family: 'Rokkitt';
+        font-size: 4rem;
+        display: inline-block;
+        text-align: left;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    #titles {
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    #titles ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .left {
+        float: left;
+    }
+
+    .right {
+        float: right;
+    }
+
+    .right>div {
+        position: relative;
+    }
+
+    #portrait {
+        display: block;
+        padding: 1rem;
+        border-radius: 50%;
+        overflow: hidden;
+        height: 15rem;
+        width: 15rem;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #portrait img {
+        width: 80%;
+        float: right;
+        filter: sepia(100%) opacity(95%) brightness(80%) saturate(80%);
+    }
+
+    #content {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%;
+        text-align: right;
+        font-size: 1.25rem;
+        text-align: justify;
+    }
+}

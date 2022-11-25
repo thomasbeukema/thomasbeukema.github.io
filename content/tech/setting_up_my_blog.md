@@ -1,0 +1,15 @@
+Title: The making of: my blog.
+Date: 2022-11-21 09:00
+Summary: How and why I started this website.
+Header: https://images.pexels.com/photos/256502/pexels-photo-256502.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
+
+I've wanted to set up a blog for a long time now. I knew I wanted to make it using a static site generator (SSG). So I searched the web for the popular ones. I tried [Hugo](https://gohugo.io), but I didn't really like it, so I gave up on it and just pushed my own blog out for a while. A few weeks passed on and I finally had time again to work on this. So I looked a little further and found [Pelican](https://getpelican.com). I set it up, which was really straightforward. Next I played with it a while and decided to go with it.
+
+# First things first
+Once I decided to go with Pelican, I had to do multiple things in order to be completely content with my website. I definitely wanted to make my website feel really personal and unique. So I could brand it myself. I looked a little into the already existing themes, but nothing was there that I really liked. So, having worked on the front-end of websites in the past, dug up my HTML and CSS skills, looked up an example theme and then got to customising. I worked my way through the templates, looked how everything was structured and started at working on the landing page. I had an idea for a design with my name in bold, with lots of blank space. I started working on this and eventually it led to the main design of the website.
+
+# Things I learned
+It was a while since I really designed a websites UI. I used to really dislike it, since I was not that talented in designing a beautiful page. Although I am definitely no top-notch designer still, I've come a long way since. Just picking up the basics on design, starting with picking a colour scheme and picking some fonts helped **a lot**. Once I had figured that out, it all came quite easy. So, once the home page was designed, I had to design all the other pages. Some challenges I faced with CSS, were really solved using some newer CSS I had no knowledge about beforehand. Stuff like the advanced selectors such as `:nth-child()` or `:first-letter` are incredibly useful and I can now have them as part of my web developer arsenal.
+
+# What this blog will be about
+I wanted to start a blog for some time now. Mostly to just document all my developer learnings I get when facing a problem, either while working at my job or on my side projects. I write all my notes in Markdown anyway (I use [Obsidian](https://obsidian.md)), so this way I can have some of my notes publicly available to help others who face similar challenges in their work. These posts I will write in English. However, I will also write posts in Dutch, my native language. The topic of these posts will be Dutch politics, so it only makes sense to write those in Dutch. So, in short, this website will bundle my interests, findings and thoughts.

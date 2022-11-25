@@ -14,17 +14,24 @@
 
 {% block content %}
 <link rel="stylesheet" href="{{ SITEURL }}/theme/css/page.css" type="text/css" />
+<link rel="stylesheet" href="{{ SITEURL }}/theme/css/blog.css" type="text/css" />
 <div class="left">
     <h1 id="title">{{ page.title }}</h1>
 </div>
 <div class="right">
-    {{ page.content }}
-
-    {% if page.modified %}
-    <p>
-        Last updated: {{ page.locale_modified }}
-    </p>
-    {% endif %}
+    {% for article in articles %}
+    <div class="article">
+        <a href="{{SITEURL}}/{{article.url}}">
+            <div>
+                <h1>{{article.title}}</h1>
+                <span>{{article.locale_date}}</span>
+                <br>
+                <span>Category: {{article.category}}</span>
+                <p>{{article.summary}}</p>
+            </div>
+        </a>
+    </div>
+    {% endfor %}
 </div>
 
 {% import 'translations.html' as translations with context %}

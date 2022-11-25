@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="{{ SITEURL }}/theme/css/navbar.css">
+
+<div id="navbar">
+    <a href="{{ SITEURL }}/">
+        <div id="logo">T</div>
+    </a>
+    <div id="nav-content">
+        <ul>
+            {% for p in pages %}
+            <li><a href="{{ SITEURL }}/{{ p.url }}">{{p.title}}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>

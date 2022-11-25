@@ -18,33 +18,37 @@
     </a>
     <div id="nav-content">
         <ul>
-            <li><a href="">blog</a></li>
             <li><a href="/pages/about.html">About</a></li>
+            <li><a href="/pages/blog.html">Blog</a></li>
             <li><a href="/pages/contact.html">Contact</a></li>
         </ul>
     </div>
 </div>    <main>
-<header>
-    <h1 class="entry-title">
-        <a href="/my-first-review.html" rel="bookmark" title="Permalink to My First Review">My First Review</a>
-    </h1>
-    
-</header>
-<footer class="post-info">
-    <time class="published" datetime="2010-12-03T10:20:00+01:00">
-        Fri 03 December 2010
-    </time>
-    <address class="vcard author">
-        By         <a class="url fn" href="/author/thomas-beukema.html">Thomas Beukema</a>
-    </address>
-    <div class="category">
-        Category: <a href="/category/review.html">Review</a>
-    </div>
-</footer><!-- /.post-info -->
-<article>
-    <p>Following is a review of my favorite mechanical keyboard.</p>
-</article>
+<link rel="stylesheet" href="/theme/css/article.css" type="text/css" />
+<div id="article-content">
+    <header>
+        <a id="backlink" href="/pages/blog.html">Back</span></a>
+        <h1 class="entry-title">
+            My First Review
+        </h1>
+        <time class="published" datetime="2010-12-03T10:20:00+01:00">
+            Fri 03 December 2010
+        </time>
+        
+    </header>
+    <article>
+        <p>Following is a review of my favorite mechanical keyboard.</p>
+    </article>
+</div>
     </main>
 </body>
+<footer>
+    &copy; <span id="year"></span>
+    Thomas Beukema
+</footer>
+
+<script>
+    document.getElementById('year').innerHTML = new Date().getFullYear().toString();
+</script>
 
 </html>

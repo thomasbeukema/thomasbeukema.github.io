@@ -1,0 +1,61 @@
+@media only screen and (min-width: 992px) {
+    .left {
+        display: block;
+        float: left;
+        width: 30%;
+    }
+
+    .right {
+        display: block;
+        float: left;
+        width: 70%;
+    }
+
+    main {
+        height: inherit;
+    }
+
+    h1#title {
+        font-family: 'Rokkitt';
+        font-size: 12rem;
+        transform: rotate(-90deg) translateX(-50%);
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+
+    a {
+        color: black;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .left {
+        display: block;
+        float: left;
+    }
+
+    .right {
+        display: block;
+        float: right;
+    }
+
+    main {
+        height: inherit;
+        width: inherit;
+    }
+
+    h1#title {
+        font-family: 'Rokkitt';
+        font-size: 4rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+
+    a {
+        color: black;
+    }
+}

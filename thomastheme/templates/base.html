@@ -16,5 +16,13 @@
         {% endblock %}
     </main>
 </body>
+<footer>
+    &copy; <span id="year"></span>
+    Thomas Beukema
+</footer>
+
+<script>
+    document.getElementById('year').innerHTML = new Date().getFullYear().toString();
+</script>
 
 </html>
