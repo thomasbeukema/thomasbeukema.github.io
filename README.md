@@ -58,8 +58,8 @@ Output is written to `public/` (gitignored; CI builds this on deploy).
 
 ## Deploy to GitHub Pages
 
-Pushes to `main` run [`.github/workflows/hugo.yml`](.github/workflows/hugo.yml), which builds with Hugo and deploys via GitHub Actions.
+Pushes to `master` run [`.github/workflows/static.yml`](.github/workflows/static.yml), which builds with Hugo and deploys via GitHub Actions.
 
 1. In the repo: **Settings → Pages → Build and deployment** → Source: **GitHub Actions**
-2. Push to `main` (or run the workflow manually under **Actions**)
+2. Push to `master` (or run the workflow manually under **Actions**)
 3. Set the custom domain to `thomasbeukema.me` in Pages settings if needed (`static/CNAME` is included in the build)
