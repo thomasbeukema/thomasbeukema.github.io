@@ -1,0 +1,99 @@
+baseURL = "https://thomasbeukema.me/"
+title = "Thomas Beukema"
+theme = "nyt-cv"
+enableRobotsTXT = true
+defaultContentLanguage = "nl"
+defaultContentLanguageInSubdir = false
+summaryLength = 40
+disableKinds = ["taxonomy", "term"]
+
+[caches]
+  [caches.images]
+    dir = ":cacheDir/images"
+
+[pagination]
+  pagerSize = 10
+
+[params]
+  author = "Thomas Beukema"
+  email = "thomasbeukema@outlook.com"
+  linkedin = "https://www.linkedin.com/in/thomasbeukema"
+  location = "Utrecht, Nederland"
+
+[outputs]
+  home = ["HTML"]
+  section = ["HTML"]
+  page = ["HTML"]
+
+
+[languages.nl]
+  locale = "nl-NL"
+  label = "Nederlands"
+  weight = 1
+  title = "Thomas Beukema"
+  contentDir = "content/nl"
+  [languages.nl.params]
+    tagline = "Engineering leadership · Public cloud · VodafoneZiggo"
+  [[languages.nl.menus.main]]
+    name = "Home"
+    pageRef = "/"
+    weight = 1
+  [[languages.nl.menus.main]]
+    name = "CV"
+    pageRef = "/cv"
+    weight = 2
+  [[languages.nl.menus.main]]
+    name = "Blog"
+    pageRef = "/blog"
+    weight = 3
+
+[languages.en]
+  locale = "en-US"
+  label = "English"
+  weight = 2
+  title = "Thomas Beukema"
+  contentDir = "content/en"
+  [languages.en.params]
+    tagline = "Engineering leadership · Public cloud · VodafoneZiggo"
+  [[languages.en.menus.main]]
+    name = "Home"
+    pageRef = "/"
+    weight = 1
+  [[languages.en.menus.main]]
+    name = "CV"
+    pageRef = "/cv"
+    weight = 2
+  [[languages.en.menus.main]]
+    name = "Blog"
+    pageRef = "/blog"
+    weight = 3
+
+[languages.fr]
+  locale = "fr-FR"
+  label = "Français"
+  weight = 3
+  title = "Thomas Beukema"
+  contentDir = "content/fr"
+  [languages.fr.params]
+    tagline = "Engineering leadership · Public cloud · VodafoneZiggo"
+  [[languages.fr.menus.main]]
+    name = "Accueil"
+    pageRef = "/"
+    weight = 1
+  [[languages.fr.menus.main]]
+    name = "CV"
+    pageRef = "/cv"
+    weight = 2
+  [[languages.fr.menus.main]]
+    name = "Blog"
+    pageRef = "/blog"
+    weight = 3
+
+
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[markup.highlight]
+  style = "github"
+  lineNos = false

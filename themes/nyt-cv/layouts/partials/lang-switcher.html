@@ -1,0 +1,12 @@
+<nav class="lang-switcher" aria-label="Language">
+  {{ $translations := .AllTranslations }}
+  {{ range $i, $t := $translations }}
+    {{- if $i }}<span class="lang-sep" aria-hidden="true">|</span>{{ end -}}
+    <a
+      href="{{ $t.RelPermalink }}"
+      hreflang="{{ $t.Lang }}"
+      class="{{ if eq $t.Lang $.Lang }}is-active{{ end }}"
+      {{ if eq $t.Lang $.Lang }}aria-current="true"{{ end }}
+    >{{ upper $t.Lang }}</a>
+  {{ end }}
+</nav>

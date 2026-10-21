@@ -1,0 +1,66 @@
+[home]
+other = "CV"
+
+[blog]
+other = "Blog"
+
+[writing]
+other = "Blog posts"
+
+[summary]
+other = "Résumé"
+
+[experience]
+other = "Expérience"
+
+[education]
+other = "Formation"
+
+[skills]
+other = "Compétences"
+
+[languages]
+other = "Langues"
+
+[certifications]
+other = "Certifications"
+
+[present]
+other = "aujourd'hui"
+
+[readMore]
+other = "Lire la suite"
+
+[latestPosts]
+other = "Derniers articles"
+
+[allPosts]
+other = "Tous les articles"
+
+[backToBlog]
+other = "← Blog"
+
+[published]
+other = "Publié"
+
+[minRead]
+other = "{{ .Count }} min de lecture"
+
+[footerCredit]
+other = "Thomas Beukema"
+
+[footerNav]
+other = "Pied de page"
+
+[contact]
+other = "Contact"
+
+[cvLabel]
+other = "Curriculum Vitae"
+
+[introLabel]
+other = "Introduction"
+[portraitCaption]
+other = "Thomas Beukema · Utrecht"
+
+

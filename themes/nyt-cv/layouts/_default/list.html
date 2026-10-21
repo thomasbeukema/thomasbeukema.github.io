@@ -1,0 +1,26 @@
+{{ define "main" }}
+  <header class="page-header">
+    <p class="page-kicker">{{ i18n "writing" }}</p>
+    <h1 class="page-title">{{ .Title }}</h1>
+    {{ with .Content }}<div class="page-intro">{{ . }}</div>{{ end }}
+    <div class="page-rule" aria-hidden="true"></div>
+  </header>
+
+  <ul class="post-index">
+    {{ range .Pages }}
+      <li class="post-index-item">
+        <time class="post-index-date" datetime="{{ .Date.Format "2006-01-02" }}">
+          {{ .Date | time.Format ":date_medium" }}
+        </time>
+        <div class="post-index-body">
+          <h2 class="post-index-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+          {{ with .Params.summary }}
+            <p class="post-index-summary">{{ . | truncate 160 }}</p>
+          {{ else }}
+            {{ with .Summary }}<p class="post-index-summary">{{ . | truncate 160 }}</p>{{ end }}
+          {{ end }}
+        </div>
+      </li>
+    {{ end }}
+  </ul>
+{{ end }}

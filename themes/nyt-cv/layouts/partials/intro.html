@@ -1,0 +1,58 @@
+{{ $lang := .Site.Language.Lang }}
+{{ $resume := index hugo.Data.resume $lang }}
+{{ if not $resume }}{{ $resume = hugo.Data.resume.nl }}{{ end }}
+
+{{ $src := resources.Get "images/portrait-source.jpg" }}
+{{ $jpg1 := $src.Fill "600x750 Center q90" }}
+{{ $jpg2 := $src.Fill "1200x1500 Center q88" }}
+{{ $webp1 := $src.Fill "600x750 webp Center q90" }}
+{{ $webp2 := $src.Fill "1200x1500 webp Center q88" }}
+
+<section class="intro no-print-chrome" aria-label="{{ i18n "introLabel" }}">
+  <div class="intro-inner">
+    <figure class="intro-portrait anim-rise anim-d1">
+      <div class="portrait-frame">
+        <picture>
+          <source
+            type="image/webp"
+            srcset="{{ $webp1.RelPermalink }} 600w, {{ $webp2.RelPermalink }} 1200w"
+            sizes="(max-width: 719px) 11rem, 16.5rem"
+          >
+          <img
+            src="{{ $jpg1.RelPermalink }}"
+            srcset="{{ $jpg1.RelPermalink }} 600w, {{ $jpg2.RelPermalink }} 1200w"
+            sizes="(max-width: 719px) 11rem, 16.5rem"
+            alt="{{ $resume.name }}"
+            width="{{ $jpg1.Width }}"
+            height="{{ $jpg1.Height }}"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+          >
+        </picture>
+      </div>
+    </figure>
+    <div class="intro-copy">
+      {{ with $resume.mandate }}
+        <p class="intro-mandate anim-rise anim-d2">{{ . }}</p>
+      {{ end }}
+      <p class="intro-name">
+        <span class="intro-name-given anim-rise anim-d2">Thomas</span>
+        <span class="intro-name-family anim-rise anim-d3">Beukema</span>
+      </p>
+      {{ with $resume.tagline }}
+        <p class="intro-tagline anim-rise anim-d3">{{ . }}</p>
+      {{ end }}
+      {{ with $resume.location }}
+        <p class="intro-place anim-rise anim-d4">{{ . }}</p>
+      {{ end }}
+      <div class="intro-rule anim-rise anim-d4" aria-hidden="true"></div>
+      {{ with $resume.intro }}
+        <p class="intro-lede anim-rise anim-d4">{{ . }}</p>
+      {{ end }}
+      <p class="intro-contact anim-rise anim-d5">
+        {{ partial "contact-icons.html" $resume }}
+      </p>
+    </div>
+  </div>
+</section>

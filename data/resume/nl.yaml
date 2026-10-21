@@ -1,0 +1,112 @@
+name: "Thomas Beukema BSc"
+mandate: "Infra & Cloud · Public Cloud chapter"
+tagline: "Engineering leadership · Public cloud · VodafoneZiggo"
+location: "Utrecht, Nederland"
+email: "thomasbeukema@outlook.com"
+linkedin: "https://www.linkedin.com/in/thomasbeukema"
+linkedin_label: "linkedin.com/in/thomasbeukema"
+instagram: "https://www.instagram.com/thomasbeukema_"
+phone: "+31 6 15 16 41 74"
+
+intro: >
+  Verantwoordelijk voor de mensen en de techniek achter de public cloud van
+  VodafoneZiggo. Daarnaast mede-oprichter van MeesterMats.
+
+summary: >
+  Vanuit het MT Infra & Cloud ben ik verantwoordelijk voor de mensen en de
+  techniek achter de public cloud van VodafoneZiggo: twee specialistische
+  teams, de productkoers en het platform waarop de organisatie draait. Daarnaast
+  bouw ik als mede-oprichter aan MeesterMats – software die leerkrachten in het
+  basisonderwijs hun tijd teruggeeft.
+
+
+skills:
+  - Engineering leadership
+  - Productstrategie
+  - Stakeholder alignment
+  - Cloud platforms & landing zones
+  - Kubernetes / EKS
+  - Cloud governance
+  - Solution architecture
+
+languages:
+  - name: Nederlands
+    level: Moedertaal
+  - name: Engels
+    level: Professioneel (volledig)
+  - name: Frans
+    level: Beperkt werkvaardig
+  - name: Duits
+    level: Elementair
+
+certifications:
+  - AWS Certified DevOps Engineer – Professional
+  - AWS Certified Developer – Associate
+  - High Impact Leadership
+
+companies:
+  - name: VodafoneZiggo
+    roles:
+      - title: Engineering Manager · Chapter Lead & Product Owner
+        start: "september 2026"
+        end: ""
+        location: "Utrecht"
+        bullets:
+          - "Eindverantwoordelijk voor het Public Cloud Engineering-chapter (10 engineers) en lid van het MT Infra & Cloud."
+          - "Bepaal de strategische koers voor landing zones en applicatie-infrastructuur – het platform waarop de organisatie draait."
+          - "Verhoog de standaard voor technisch vakmanschap terwijl we bouwen aan een veilig, schaalbaar en kostenefficiënt cloudfundament."
+          - "Verbind people leadership en productstrategie over twee gespecialiseerde engineeringteams."
+      - title: Product Owner – AWS Landing Zone & Cloud Platform
+        start: "mei 2025"
+        end: "september 2026"
+        location: "Utrecht"
+        bullets:
+          - "Bepaalde de visie en roadmap voor het centrale AWS-landschap over Cloud Enablement en Platform Engineering heen."
+          - "Stuurde het Cloud Enablement Team (CET) aan op ontwerp, optimalisatie, governance en security van de AWS Landing Zone."
+          - "Leidde de roadmap van Cloud Platform Engineering (CPE) voor core EKS-infrastructuur (Kubernetes) en enterprise-containerisatie."
+      - title: Cloud Engineer
+        start: "augustus 2021"
+        end: "mei 2025"
+        location: "Utrecht"
+        bullets:
+          - "Ontwikkelde en beheerde de AWS- en Azure-landingzones binnen het Cloud Enablement Team."
+          - "Ontwierp schaalbare public-cloudarchitecturen voor kritieke bedrijfsapplicaties in een agile scrum-omgeving."
+
+  - name: MeesterMats
+    roles:
+      - title: Mede-oprichter & Tech Lead
+        start: "april 2026"
+        end: ""
+        location: "Utrecht"
+        description: >
+          Ontwikkelt software die de administratieve werkdruk van leerkrachten in het basisonderwijs structureel verlaagt.
+        bullets:
+          - "Verantwoordelijk voor de product- en technologieroadmap in nauwe samenwerking met scholen en leerkrachten."
+          - "Ontwerp en bouw een veilige, schaalbare cloudarchitectuur met focus op eenvoud en gebruiksgemak."
+
+  - name: Terrasboot
+    roles:
+      - title: Mede-oprichter
+        start: "mei 2022"
+        end: "oktober 2024"
+        location: "Utrecht"
+        description: >
+          Bouwde een bootverhuurstartup in Utrecht op – verantwoordelijk voor strategie, klantrelaties en operatie.
+
+education:
+  - institution: Vrije Universiteit Amsterdam
+    degree: "LLM Internetrecht en IE"
+    period: "2025 – 2026"
+    detail: "Vakken in cybercrime, AI-regulering, privacy en intellectueel eigendom. Niet afgerond."
+  - institution: Universiteit Utrecht
+    degree: "BSc Informatiekunde"
+    period: "2020 – 2024"
+    detail: "Scriptie over het inzetten van LLM's voor stance detection (8,0). Actief lid bij Unitas S.R."
+  - institution: Universiteit Utrecht
+    degree: "Minor Rechten"
+    period: "2023 – 2024"
+    detail: "Verdieping in Nederlands, Europees en internationaal recht: privaat-, straf-, staats- en bestuursrecht."
+  - institution: Teylingen College Leeuwenhorst
+    degree: "VWO / Gymnasium, Economie & Maatschappij"
+    period: "2013 – 2020"
+    detail: "Eindcijfer: 7,0."

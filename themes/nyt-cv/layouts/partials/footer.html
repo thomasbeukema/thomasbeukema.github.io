@@ -1,0 +1,29 @@
+{{ $lang := .Site.Language.Lang }}
+{{ $resume := index hugo.Data.resume $lang }}
+{{ if not $resume }}{{ $resume = hugo.Data.resume.nl }}{{ end }}
+
+<footer class="site-footer no-print-chrome">
+  <div class="site-footer-inner">
+    <div class="footer-brand">
+      <a class="footer-mark" href="{{ "/" | relLangURL }}">{{ .Site.Title }}</a>
+      {{ with $resume.tagline }}
+        <p class="footer-tagline">{{ . }}</p>
+      {{ end }}
+    </div>
+    <div class="footer-meta">
+      <nav class="footer-nav" aria-label="{{ i18n "footerNav" }}">
+        <ul>
+          {{ range .Site.Menus.main }}
+            <li>
+              <a href="{{ .URL }}">{{ .Name }}</a>
+            </li>
+          {{ end }}
+        </ul>
+      </nav>
+      <p class="footer-contact">
+        {{ partial "contact-icons.html" $resume }}
+      </p>
+      <p class="footer-copy">© {{ now.Year }} {{ i18n "footerCredit" }}</p>
+    </div>
+  </div>
+</footer>

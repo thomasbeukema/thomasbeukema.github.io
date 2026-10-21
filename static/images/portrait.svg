@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1200" viewBox="0 0 900 1200" role="img" aria-label="Thomas Beukema">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a1a1a"/>
+      <stop offset="100%" stop-color="#3a3a3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="1200" fill="url(#g)"/>
+  <text x="450" y="580" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="220" font-weight="700" fill="#f5f5f0" letter-spacing="-8">TB</text>
+  <text x="450" y="680" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#bdbdb5" letter-spacing="6">THOMAS BEUKEMA</text>
+</svg>

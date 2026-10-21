@@ -1,0 +1,104 @@
+{{ $lang := .Site.Language.Lang }}
+{{ $resume := index hugo.Data.resume $lang }}
+{{ if not $resume }}
+  {{ $resume = hugo.Data.resume.nl }}
+{{ end }}
+
+<article class="cv" id="cv" itemscope itemtype="https://schema.org/Person">
+  <header class="cv-head reveal">
+    <h1 class="cv-print-name" itemprop="name">{{ $resume.name }}</h1>
+    {{ with $resume.mandate }}
+      <p class="cv-mandate">{{ . }}</p>
+    {{ end }}
+    <p class="cv-title" itemprop="jobTitle">{{ $resume.tagline }}</p>
+    <p class="cv-contact">
+      <span class="cv-contact-screen">
+        <a href="mailto:{{ $resume.email }}" itemprop="email">{{ $resume.email }}</a>
+        <span class="sep">·</span>
+        <a href="{{ $resume.linkedin }}" itemprop="sameAs" rel="noopener noreferrer">{{ $resume.linkedin_label }}</a>
+        <span class="sep">·</span>
+        <span itemprop="address">{{ $resume.location }}</span>
+      </span>
+      <span class="cv-contact-print">
+        {{ with $resume.phone }}{{ . }}<span class="sep">·</span>{{ end }}
+        {{ $resume.email }}
+        <span class="sep">·</span>
+        {{ $resume.linkedin_label }}
+        <span class="sep">·</span>
+        {{ $resume.location }}
+      </span>
+    </p>
+    <p class="cv-summary" itemprop="description">{{ $resume.summary }}</p>
+  </header>
+
+  <section class="cv-block reveal" id="experience">
+    <div class="section-head">
+      <h2 class="section-title">{{ i18n "experience" }}</h2>
+    </div>
+    {{ range $resume.companies }}
+      <div class="company-block reveal">
+        <h3 class="company-name">{{ .name }}</h3>
+        {{ range .roles }}
+          <div class="role">
+            <p class="role-meta">
+              <span class="role-dates">
+                {{ .start }} – {{ if .end }}{{ .end }}{{ else }}{{ i18n "present" }}{{ end }}
+              </span>
+              {{ with .location }}<span class="role-place">{{ . }}</span>{{ end }}
+            </p>
+            <div class="role-body">
+              <h4 class="role-title">{{ .title }}</h4>
+              {{ with .description }}<p class="role-desc">{{ . }}</p>{{ end }}
+              {{ with .bullets }}
+                <ul class="role-bullets">
+                  {{ range . }}<li>{{ . }}</li>{{ end }}
+                </ul>
+              {{ end }}
+            </div>
+          </div>
+        {{ end }}
+      </div>
+    {{ end }}
+  </section>
+
+  <section class="cv-block reveal" id="education">
+    <div class="section-head">
+      <h2 class="section-title">{{ i18n "education" }}</h2>
+    </div>
+    <ul class="edu-list">
+      {{ range $resume.education }}
+        <li class="edu-item">
+          <span class="edu-degree">{{ .degree }}</span>
+          <span class="edu-school">{{ .institution }}</span>
+          <span class="edu-period">{{ .period }}</span>
+          {{ with .detail }}
+            <p class="edu-detail">{{ . }}</p>
+          {{ end }}
+        </li>
+      {{ end }}
+    </ul>
+  </section>
+
+  <section class="cv-block cv-credentials reveal" id="skills">
+    <div class="section-head">
+      <h2 class="section-title">{{ i18n "skills" }}</h2>
+    </div>
+    <ul class="skill-chips">
+      {{ range $resume.skills }}<li>{{ . }}</li>{{ end }}
+    </ul>
+    <div class="cred-row">
+      <h3 class="cred-label">{{ i18n "languages" }}</h3>
+      <p class="cred-line">
+        {{ range $i, $l := $resume.languages }}{{ if $i }} · {{ end }}<strong>{{ $l.name }}</strong> ({{ $l.level }}){{ end }}
+      </p>
+    </div>
+    {{ with $resume.certifications }}
+      <div class="cred-row">
+        <h3 class="cred-label">{{ i18n "certifications" }}</h3>
+        <ul class="cred-list">
+          {{ range . }}<li>{{ . }}</li>{{ end }}
+        </ul>
+      </div>
+    {{ end }}
+  </section>
+</article>

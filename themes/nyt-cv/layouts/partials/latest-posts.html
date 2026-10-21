@@ -1,0 +1,30 @@
+{{ $posts := where .Site.RegularPages "Section" "blog" }}
+{{ $posts = first 3 $posts }}
+{{ if $posts }}
+<section class="writing-block no-print-chrome reveal" id="writing" aria-label="{{ i18n "latestPosts" }}">
+  <div class="section-head section-head--split">
+    <div>
+      <p class="page-kicker">{{ i18n "writing" }}</p>
+      <h2 class="section-title">{{ i18n "latestPosts" }}</h2>
+    </div>
+    <a class="section-more" href="{{ "blog" | relLangURL }}">{{ i18n "allPosts" }}</a>
+  </div>
+  <ul class="writing-list">
+    {{ range $posts }}
+      <li>
+        <div class="writing-body">
+          <h3 class="writing-title">
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          </h3>
+          {{ with .Params.summary }}
+            <p class="writing-summary">{{ . | truncate 140 }}</p>
+          {{ end }}
+        </div>
+        <time datetime="{{ .Date.Format "2006-01-02" }}">
+          {{ .Date | time.Format ":date_medium" }}
+        </time>
+      </li>
+    {{ end }}
+  </ul>
+</section>
+{{ end }}

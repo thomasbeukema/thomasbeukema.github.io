@@ -1,0 +1,11 @@
+name = "nyt-cv"
+license = "MIT"
+licenselink = "https://opensource.org/licenses/MIT"
+description = "New York Times–inspired personal CV and blog theme"
+homepage = "https://thomasbeukema.me/"
+tags = ["blog", "cv", "resume", "multilingual", "minimal"]
+features = ["i18n", "print-cv"]
+min_version = "0.120.0"
+
+[author]
+  name = "Thomas Beukema"
