@@ -20,6 +20,11 @@ disableKinds = ["taxonomy", "term"]
   linkedin = "https://www.linkedin.com/in/thomasbeukema"
   location = "Utrecht, Nederland"
 
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
 [outputs]
   home = ["HTML"]
   section = ["HTML"]

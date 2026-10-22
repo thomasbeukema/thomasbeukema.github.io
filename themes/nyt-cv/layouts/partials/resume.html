@@ -61,6 +61,38 @@
     {{ end }}
   </section>
 
+  {{ with $resume.volunteer }}
+  <section class="cv-block reveal" id="volunteer">
+    <div class="section-head">
+      <h2 class="section-title">{{ i18n "volunteer" }}</h2>
+    </div>
+    {{ range . }}
+      <div class="company-block reveal">
+        <h3 class="company-name">{{ .name }}</h3>
+        {{ range .roles }}
+          <div class="role">
+            <p class="role-meta">
+              <span class="role-dates">
+                {{ .start }} – {{ if .end }}{{ .end }}{{ else }}{{ i18n "present" }}{{ end }}
+              </span>
+              {{ with .location }}<span class="role-place">{{ . }}</span>{{ end }}
+            </p>
+            <div class="role-body">
+              <h4 class="role-title">{{ .title }}</h4>
+              {{ with .description }}<p class="role-desc">{{ . }}</p>{{ end }}
+              {{ with .bullets }}
+                <ul class="role-bullets">
+                  {{ range . }}<li>{{ . }}</li>{{ end }}
+                </ul>
+              {{ end }}
+            </div>
+          </div>
+        {{ end }}
+      </div>
+    {{ end }}
+  </section>
+  {{ end }}
+
   <section class="cv-block reveal" id="education">
     <div class="section-head">
       <h2 class="section-title">{{ i18n "education" }}</h2>

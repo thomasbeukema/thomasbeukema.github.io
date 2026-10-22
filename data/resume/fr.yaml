@@ -40,9 +40,16 @@ languages:
     level: Élémentaire
 
 certifications:
-  - AWS Certified DevOps Engineer – Professional
-  - AWS Certified Developer – Associate
-  - High Impact Leadership
+  - Running Containers on Amazon EKS (AWS, 2025)
+  - Certified SAFe® 6 Agilist (2025)
+  - High Impact Leadership — YEARTH Academy (2024)
+  - Professional Scrum Product Owner™ II (PSPO II) (2023)
+  - Professional Scrum Product Owner™ I (PSPO I) (2023)
+  - AWS Certified DevOps Engineer – Professional (2022)
+  - AWS Certified Solutions Architect – Associate (2022)
+  - AWS Certified Developer – Associate (2022)
+  - Cambridge English Level 2 (Advanced / CAE) (2018)
+  - Cambridge English Level 1 (First / FCE) (2016)
 
 companies:
   - name: VodafoneZiggo
@@ -92,6 +99,53 @@ companies:
         location: "Utrecht"
         description: >
           Créé une startup de location de bateaux à Utrecht – responsable de la stratégie, des relations clients et des opérations.
+
+volunteer:
+  - name: KNVB
+    roles:
+      - title: Official fédéral
+        start: "janvier 2026"
+        end: ""
+      - title: Arbitre d'association
+        start: "septembre 2023"
+        end: "janvier 2026"
+
+  - name: Nieuw Sociaal Contract
+    roles:
+      - title: "Candidat député #9"
+        start: "août 2025"
+        end: "octobre 2025"
+        description: >
+          Candidat aux élections à la Tweede Kamer, avec un focus sur la sécurité numérique,
+          la cyber-résilience et la voix des jeunes à La Haye.
+      - title: Coordinateur régional
+        start: "janvier 2025"
+        end: "juin 2025"
+        description: >
+          Premier interlocuteur du siège du parti et des membres dans la province ;
+          coordination des campagnes, du recrutement et de l'organisation locale.
+
+  - name: Jong Sociaal Contract
+    roles:
+      - title: Président national
+        start: "juin 2025"
+        end: "janvier 2026"
+        description: >
+          Responsable de la direction stratégique et de la gestion quotidienne de
+          l'organisation de jeunesse politique ; développement de la vision, de la
+          structure organisationnelle et du positionnement externe.
+      - title: Diverses fonctions
+        start: "mai 2024"
+        end: "juin 2025"
+        bullets:
+          - "Conseiller politique Migration (décembre 2024 – juin 2025)"
+          - "Président de la commission d'audit (mai 2024 – juin 2025)"
+
+  - name: Unitas S.R.
+    roles:
+      - title: Membre de commission
+        start: "octobre 2020"
+        end: "septembre 2021"
 
 education:
   - institution: Vrije Universiteit Amsterdam

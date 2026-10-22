@@ -1,0 +1,51 @@
+{{- $page := .page -}}
+{{- $description := .description -}}
+{{- $image := .image -}}
+{{- $author := $page.Site.Params.author -}}
+{{- $lang := or $page.Site.Language.LanguageCode $page.Lang -}}
+{{- $schema := dict -}}
+{{- if and (eq $page.Section "blog") $page.IsPage -}}
+  {{- $person := dict "@type" "Person" "name" $author "url" ($page.Site.BaseURL | string) -}}
+  {{- $schema = dict
+    "@context" "https://schema.org"
+    "@type" "BlogPosting"
+    "headline" ($page.Title | string)
+    "description" ($description | string)
+    "datePublished" ($page.Date.Format "2006-01-02T15:04:05Z07:00")
+    "dateModified" ((or $page.Lastmod $page.Date).Format "2006-01-02T15:04:05Z07:00")
+    "author" $person
+    "publisher" $person
+    "mainEntityOfPage" (dict "@type" "WebPage" "@id" ($page.Permalink | string))
+    "image" ($image | string)
+    "inLanguage" ($lang | string)
+  -}}
+  {{- with $page.Params.subject -}}
+    {{- $schema = merge $schema (dict "articleSection" (. | string)) -}}
+  {{- end -}}
+{{- else if or $page.IsHome (eq $page.Layout "cv") -}}
+  {{- $schema = dict
+    "@context" "https://schema.org"
+    "@type" "Person"
+    "name" ($author | string)
+    "url" ($page.Permalink | string)
+    "email" ($page.Site.Params.email | string)
+    "image" ($image | string)
+    "jobTitle" "Engineering Manager Public Cloud"
+    "worksFor" (dict "@type" "Organization" "name" "VodafoneZiggo")
+    "sameAs" (slice ($page.Site.Params.linkedin | string))
+  -}}
+  {{- with $page.Site.Params.location -}}
+    {{- $schema = merge $schema (dict "address" (dict "@type" "PostalAddress" "addressLocality" (. | string))) -}}
+  {{- end -}}
+{{- else -}}
+  {{- $schema = dict
+    "@context" "https://schema.org"
+    "@type" "WebSite"
+    "name" ($page.Site.Title | string)
+    "description" ($description | string)
+    "url" ($page.Site.BaseURL | string)
+    "inLanguage" ($lang | string)
+    "author" (dict "@type" "Person" "name" ($author | string))
+  -}}
+{{- end -}}
+<script type="application/ld+json">{{ $schema | jsonify | safeJS }}</script>

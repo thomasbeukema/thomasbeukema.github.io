@@ -4,6 +4,7 @@ date: 2026-10-21
 draft: false
 translationKey: "welcome-post"
 subject: "Platform strategy & digital sovereignty"
+description: "An Indian Certificate Authority losing browser trust and a critical PHP flaw show how geopolitics, supply-chain risk, and tech debt converge in cloud platform strategy."
 summary: "An Indian Certificate Authority losing browser trust and a critical vulnerability in PHP look like separate incidents. Together, they show how geopolitics, supply-chain risk, and tech debt converge at the core of your cloud platform."
 ---
 

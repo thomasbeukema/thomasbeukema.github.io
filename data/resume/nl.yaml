@@ -40,9 +40,16 @@ languages:
     level: Elementair
 
 certifications:
-  - AWS Certified DevOps Engineer – Professional
-  - AWS Certified Developer – Associate
-  - High Impact Leadership
+  - Running Containers on Amazon EKS (AWS, 2025)
+  - Certified SAFe® 6 Agilist (2025)
+  - High Impact Leadership — YEARTH Academy (2024)
+  - Professional Scrum Product Owner™ II (PSPO II) (2023)
+  - Professional Scrum Product Owner™ I (PSPO I) (2023)
+  - AWS Certified DevOps Engineer – Professional (2022)
+  - AWS Certified Solutions Architect – Associate (2022)
+  - AWS Certified Developer – Associate (2022)
+  - Cambridge English Level 2 (Advanced / CAE) (2018)
+  - Cambridge English Level 1 (First / FCE) (2016)
 
 companies:
   - name: VodafoneZiggo
@@ -92,6 +99,53 @@ companies:
         location: "Utrecht"
         description: >
           Bouwde een bootverhuurstartup in Utrecht op – verantwoordelijk voor strategie, klantrelaties en operatie.
+
+volunteer:
+  - name: KNVB
+    roles:
+      - title: Bondsofficial
+        start: "januari 2026"
+        end: ""
+      - title: Verenigingsscheidsrechter
+        start: "september 2023"
+        end: "januari 2026"
+
+  - name: Nieuw Sociaal Contract
+    roles:
+      - title: "Kandidaat-Kamerlid #9"
+        start: "augustus 2025"
+        end: "oktober 2025"
+        description: >
+          Kandidaat voor de Tweede Kamerverkiezingen, met focus op digitale veiligheid,
+          cyberweerbaarheid en het geluid van jongeren in Den Haag.
+      - title: Regiocoördinator
+        start: "januari 2025"
+        end: "juni 2025"
+        description: >
+          Eerste aanspreekpunt voor het partijbureau en leden in de provincie;
+          coördineerde campagneactiviteiten, ledenwerving en lokale organisatie.
+
+  - name: Jong Sociaal Contract
+    roles:
+      - title: Landelijk Voorzitter
+        start: "juni 2025"
+        end: "januari 2026"
+        description: >
+          Eindverantwoordelijk voor de strategische aansturing en het dagelijkse bestuur
+          van de politieke jongerenvereniging; bouwde aan visie, organisatiestructuur
+          en externe positionering.
+      - title: Verschillende functies
+        start: "mei 2024"
+        end: "juni 2025"
+        bullets:
+          - "Politiek Adviseur Migratie (december 2024 – juni 2025)"
+          - "Voorzitter Auditcommissie (mei 2024 – juni 2025)"
+
+  - name: Unitas S.R.
+    roles:
+      - title: Commissielid
+        start: "oktober 2020"
+        end: "september 2021"
 
 education:
   - institution: Vrije Universiteit Amsterdam

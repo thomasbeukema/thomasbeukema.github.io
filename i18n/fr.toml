@@ -13,6 +13,9 @@ other = "Résumé"
 [experience]
 other = "Expérience"
 
+[volunteer]
+other = "Engagements"
+
 [education]
 other = "Formation"
 

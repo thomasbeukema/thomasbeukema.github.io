@@ -4,6 +4,7 @@ date: 2026-10-21
 draft: false
 translationKey: "welcome-post"
 subject: "Stratégie de plateforme & souveraineté numérique"
+description: "La révocation d'une AC indienne et une faille critique dans PHP montrent comment géopolitique, supply chain et dette technique convergent dans la stratégie de plateforme cloud."
 summary: "Une autorité de certification indienne qui perd la confiance des navigateurs et une vulnérabilité critique dans PHP semblent être deux incidents distincts. Ensemble, ils montrent comment géopolitique, risque de supply chain et dette technique convergent au cœur des plateformes cloud."
 ---
 

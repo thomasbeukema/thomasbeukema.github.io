@@ -40,9 +40,16 @@ languages:
     level: Elementary
 
 certifications:
-  - AWS Certified DevOps Engineer – Professional
-  - AWS Certified Developer – Associate
-  - High Impact Leadership
+  - Running Containers on Amazon EKS (AWS, 2025)
+  - Certified SAFe® 6 Agilist (2025)
+  - High Impact Leadership — YEARTH Academy (2024)
+  - Professional Scrum Product Owner™ II (PSPO II) (2023)
+  - Professional Scrum Product Owner™ I (PSPO I) (2023)
+  - AWS Certified DevOps Engineer – Professional (2022)
+  - AWS Certified Solutions Architect – Associate (2022)
+  - AWS Certified Developer – Associate (2022)
+  - Cambridge English Level 2 (Advanced / CAE) (2018)
+  - Cambridge English Level 1 (First / FCE) (2016)
 
 companies:
   - name: VodafoneZiggo
@@ -92,6 +99,52 @@ companies:
         location: "Utrecht"
         description: >
           Built a boat-rental startup in Utrecht – responsible for strategy, customer relationships and operations.
+
+volunteer:
+  - name: KNVB
+    roles:
+      - title: Official referee
+        start: "January 2026"
+        end: ""
+      - title: Association referee
+        start: "September 2023"
+        end: "January 2026"
+
+  - name: Nieuw Sociaal Contract
+    roles:
+      - title: "Parliamentary candidate #9"
+        start: "August 2025"
+        end: "October 2025"
+        description: >
+          Candidate for the Dutch House of Representatives, focusing on digital security,
+          cyber resilience and a stronger voice for young people in The Hague.
+      - title: Regional coordinator
+        start: "January 2025"
+        end: "June 2025"
+        description: >
+          First point of contact for the party office and members in the province;
+          coordinated campaign activity, membership and local organisation.
+
+  - name: Jong Sociaal Contract
+    roles:
+      - title: National chair
+        start: "June 2025"
+        end: "January 2026"
+        description: >
+          Accountable for strategic direction and day-to-day leadership of the political
+          youth organisation; built out vision, organisational structure and external positioning.
+      - title: Various roles
+        start: "May 2024"
+        end: "June 2025"
+        bullets:
+          - "Political advisor on migration (December 2024 – June 2025)"
+          - "Chair of the audit committee (May 2024 – June 2025)"
+
+  - name: Unitas S.R.
+    roles:
+      - title: Committee member
+        start: "October 2020"
+        end: "September 2021"
 
 education:
   - institution: Vrije Universiteit Amsterdam

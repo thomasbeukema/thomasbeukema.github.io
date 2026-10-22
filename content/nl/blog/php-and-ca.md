@@ -4,6 +4,7 @@ date: 2026-10-21
 draft: false
 translationKey: "welcome-post"
 subject: "Platformstrategie & digitale soevereiniteit"
+description: "Een Indiase Certificate Authority die browservertrouwen verliest en een kritiek PHP-lek laten zien hoe geopolitiek, supply-chain risk en tech debt samenkomen in cloudplatformstrategie."
 summary: "Een Indiase Certificate Authority die het vertrouwen van westerse browsers verliest en een kritieke vulnerability in PHP lijken losstaande incidenten. Samen laten ze zien hoe geopolitiek, supply-chain risk en tech debt samenkomen in de kern van je cloudplatform."
 ---
 

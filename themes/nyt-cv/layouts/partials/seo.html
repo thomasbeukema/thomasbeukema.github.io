@@ -1,0 +1,72 @@
+{{- $title := cond .IsHome .Site.Title (printf "%s · %s" .Title .Site.Title) -}}
+{{- $description := "" -}}
+{{- with .Description -}}
+  {{- $description = . -}}
+{{- else -}}
+  {{- with .Params.summary -}}
+    {{- $description = . -}}
+  {{- else -}}
+    {{- with .Summary -}}
+      {{- $description = (. | plainify | htmlUnescape | chomp) -}}
+    {{- else -}}
+      {{- $description = .Site.Params.tagline | default .Site.Title -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- $canonical := .Permalink -}}
+{{- $locale := or .Site.Language.LanguageCode .Lang -}}
+{{- $ogType := cond (and (eq .Section "blog") .IsPage) "article" "website" -}}
+{{- $ogImage := "" -}}
+{{- with .Params.images -}}
+  {{- $ogImage = (index . 0 | absURL) -}}
+{{- else -}}
+  {{- with .Params.image -}}
+    {{- $ogImage = (. | absURL) -}}
+  {{- else -}}
+    {{- $ogImage = "images/portrait.jpg" | absURL -}}
+  {{- end -}}
+{{- end -}}
+
+<title>{{ $title }}</title>
+<meta name="description" content="{{ $description }}">
+<meta name="author" content="{{ .Site.Params.author }}">
+<link rel="canonical" href="{{ $canonical }}">
+
+{{- range .AllTranslations }}
+<link rel="alternate" hreflang="{{ or .Language.LanguageCode .Lang }}" href="{{ .Permalink }}">
+{{- end }}
+{{- with .Sites.Default.Home }}
+<link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
+{{- end }}
+
+<meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $description }}">
+<meta property="og:type" content="{{ $ogType }}">
+<meta property="og:url" content="{{ $canonical }}">
+<meta property="og:locale" content="{{ replace $locale "-" "_" }}">
+{{- range .AllTranslations }}
+  {{- if ne .Lang $.Lang }}
+<meta property="og:locale:alternate" content="{{ replace (or .Language.LanguageCode .Lang) "-" "_" }}">
+  {{- end }}
+{{- end }}
+<meta property="og:image" content="{{ $ogImage }}">
+<meta property="og:image:alt" content="{{ .Site.Params.author }}">
+
+{{- if eq $ogType "article" }}
+<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+{{- with .Lastmod }}
+<meta property="article:modified_time" content="{{ .Format "2006-01-02T15:04:05Z07:00" }}">
+{{- end }}
+<meta property="article:author" content="{{ $.Site.Params.author }}">
+{{- with .Params.subject }}
+<meta property="article:section" content="{{ . }}">
+{{- end }}
+{{- end }}
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ $title }}">
+<meta name="twitter:description" content="{{ $description }}">
+<meta name="twitter:image" content="{{ $ogImage }}">
+
+{{ partial "schema.html" (dict "page" . "description" $description "image" $ogImage) }}
