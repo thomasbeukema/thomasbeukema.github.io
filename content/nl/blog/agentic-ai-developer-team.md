@@ -36,11 +36,11 @@ Hoe beter de codebase zelf beschrijft hoe het systeem in elkaar zit en welke reg
 
 ## Laat het platform de standaardcontroles uitvoeren
 
-Geen enkele senior engineer blijft scherp bij het doorlezen van honderden regels gegenereerde boilerplate, standaardmigraties of repetitieve tests. Na het derde grote pull request op een middag neemt de aandacht af en glippen juist de subtiele fouten erdoor waar een menselijk oog voor nodig was.
+Geen enkele senior engineer blijft scherp bij het doorlezen van honderden regels gegenereerde boilerplate, standaardmigraties of repetitieve tests. Na de derde grote pull request op een middag neemt de aandacht af en glippen juist de subtiele fouten erdoor waar een menselijk oog voor nodig was.
 
 De eerste selectie hoort daarom niet bij een collega te liggen, maar in het platform. Voordat een pull request bij een reviewer terechtkomt, moet de CI/CD-pipeline al streng hebben getoetst op formatting, type-checks, security-scans (SAST/DAST), contracttests tussen services en testdekking op kritieke paden. Waar dat waarde toevoegt, kun je dat aanvullen met mutation testing en policy-as-code.
 
-Pas wanneer al die geautomatiseerde controles slagen, heeft een inhoudelijke review door een collega zin. De reviewer hoeft dan niet meer te controleren of aan de basisregels is voldaan, maar kan zich richten op wat niet te automatiseren valt: past deze wijziging binnen onze architectuur en lost ze het juiste probleem op?
+Pas wanneer al die geautomatiseerde controles slagen, heeft een inhoudelijke review door een collega zin. De reviewer hoeft dan niet meer te controleren of aan de basisregels is voldaan, maar kan zich richten op wat niet te automatiseren valt: past deze wijziging binnen onze architectuur en lost die het juiste probleem op?
 
 ## Stem autonomie af op het risicoprofiel
 
@@ -48,7 +48,7 @@ De kernvraag is niet of je agents wel of niet vertrouwt, maar hoeveel vrijheid j
 
 Voor afgebakende taken met een beperkt risico, zoals dependency-updates, interne opschoning binnen één module of het genereren van standaardadapters achter een stabiel contract, volstaat *human-on-the-loop*. Zolang de automatische controles slagen en de wijziging binnen de afgesproken kaders blijft, is een zware handmatige goedkeuring overbodig.
 
-Zodra het gaat om cruciale domeinlogica, authenticatie en autorisatie, datamigraties of wijzigingen aan publieke interfaces, ligt dat anders. Daar hoort *human-in-the-loop* bij: een agent kan het voorbereidende werk doen, maar een engineer beoordeelt de wijziging en geeft expliciet akkoord voor merge. Die grens trekken dwingt teams en management om te benoemen welke onderdelen van het landschap bedrijfskritisch zijn en welke teams over voldoende testvolwassenheid en observability beschikken om agents meer ruimte te geven.
+Zodra het gaat om cruciale domeinlogica, authenticatie en autorisatie, datamigraties of wijzigingen aan publieke interfaces, ligt dat anders. Daar hoort *human-in-the-loop* bij: een agent kan het voorbereidende werk doen, maar een engineer beoordeelt de wijziging en geeft expliciet akkoord voor de merge. Die grens trekken dwingt teams en management om te benoemen welke onderdelen van het landschap bedrijfskritisch zijn en welke teams over voldoende testvolwassenheid en observability beschikken om agents meer ruimte te geven.
 
 ## Waar je als technisch leider uiteindelijk op stuurt
 
