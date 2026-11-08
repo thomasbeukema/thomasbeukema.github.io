@@ -4,54 +4,54 @@ date: 2026-11-08
 draft: false
 translationKey: "agentic-ai-developer-team"
 subject: "Platform strategy & engineering leadership"
-description: "Bringing autonomous coding agents into a large organisation is not a tooling pilot. It requires concrete choices on repository context, automated platform checks, and autonomy by risk level."
-summary: "Many organisations treat autonomous coding agents as the natural next step after an IDE copilot. In practice, the bottleneck moves completely: from writing code to specifying work clearly, keeping context in the repo, and verifying what ships to production."
+description: "Bringing autonomous coding agents into a large organisation is not a tooling pilot. It requires clear choices on repository context, automated platform checks, and autonomy by risk level."
+summary: "Many organisations treat autonomous coding agents as the logical next step after an IDE copilot. In practice, the bottleneck shifts completely: from writing code to specifying work clearly, recording context in the repository, and verifying what goes to production."
 ---
 
-The step from an IDE copilot to an autonomous coding agent looks small from a distance. One suggests the next few lines; the other picks up a ticket, works across files, runs the tests, and opens a pull request. Yet that transition is exactly where most teams stall. A copilot fits neatly inside an individual developer's existing workflow. An agent that acts on its own across a codebase touches how a team scopes work, reviews changes, and releases software.
+The step from an IDE copilot to an autonomous coding agent looks small. One suggests code line by line; the other picks up a ticket, edits multiple files, runs the tests, and opens a pull request. Yet that transition is where many organisations stall. A copilot fits within an individual developer's existing workflow. An agent that navigates a codebase on its own, runs tests, and proposes changes directly affects how a team scopes, reviews, and releases work.
 
-Treating that shift as a simple tooling rollout rarely ends well. The real questions are organisational and architectural: where does the agent get reliable context, which checks does the platform enforce before anyone looks at a diff, and where do you still require a human to sign off?
+Approaching that shift as a simple tooling pilot quickly runs into organisational limits. The underlying questions are architectural and operational: where does the agent get reliable context, which checks does the platform enforce automatically, and at which points does a human still need to sign off?
 
-## More pull requests does not mean higher delivery speed
+## More pull requests does not mean higher speed
 
-In a demo, tools like Devin, Claude Code, or an internal multi-agent setup look effortless. A working branch appears in minutes. Drop the same setup into a mature enterprise landscape and something very different happens: pull request queues grow, diffs get larger, and senior engineers spend their days reverse-engineering code they did not write.
+In a demo, an autonomous agent like Devin, Claude Code, or an internal multi-agent workflow looks convincing. Within minutes, a working branch is ready. Apply the same setup to a mature enterprise landscape and a very different picture emerges: open pull requests pile up, diffs grow larger, and senior engineers spend their days untangling code they did not write themselves.
 
-The bottleneck has not vanished; it has moved downstream. Time that used to go into writing code now goes into framing the task beforehand and verifying the result afterwards. When an agent slightly misreads the intent, ignores an established local convention, or makes a quiet assumption about error handling, reviewing the patch can take more effort than writing it from scratch. Without clear working agreements, teams look busy on paper while the engineers accountable for production slowly drown in review load.
+The work has not disappeared; it has shifted. Time that used to go into writing code now goes into defining the assignment clearly upfront and checking the result afterwards. When an agent slightly misinterprets the intent, ignores an existing convention, or makes a silent assumption about error handling, reviewing the change can take more time than building it yourself. Without clear working agreements, productivity rises on paper while the engineers accountable for production get bogged down in review load.
 
-## Less typing, much sharper specification and review
+## From writing code to sharp specification and verification
 
-Working well with agents asks for a different emphasis in the software engineer's role. As long as we act as if the job is mainly about typing code quickly, we use agents poorly. The real leverage of an experienced engineer increasingly sits at the start and end of the loop: breaking the problem down cleanly, making constraints explicit, and judging whether the resulting change actually fits the system.
+That shift calls for a different understanding of the software engineer's role. As long as we treat the core of the job as typing code as fast as possible, we use agents the wrong way. The added value of an experienced engineer increasingly sits at the front and back of the process: breaking down the problem properly, making constraints explicit, and assessing whether the proposed solution is technically and functionally sound.
 
-A good brief for an agent reads less like a loose user story and more like a technical contract. What needs to change, which interfaces must stay backwards compatible, which failure modes matter, and how do we prove the change is done? Leave those boundaries vague and the model will quietly fill in the blanks on its own.
+A good assignment for an agent reads less like an open-ended user story and more like a technical contract. What exactly needs to change, which interfaces must remain backwards compatible, which failure scenarios matter, and when is the work demonstrably complete? When those boundaries are missing, the model fills in the gaps on its own.
 
-That is also why output metrics like commit counts, closed tickets, or story points backfire here. They reward volume at the exact moment you need people to care about precision in specification and rigour in review.
+That is why steering on output metrics such as commit counts, closed tickets, or story points is counterproductive here. Those metrics reward volume at the exact moment you need sharp specification and thorough review.
 
-## Keep the truth inside the repository
+## The repository as the central source of knowledge
 
-An engineer who has been with a team for three years knows which Confluence pages are out of date, which service has hidden coupling, and why an awkward workaround exists in billing. An agent has none of that institutional memory. It only sees the prompt and whatever lives inside the repository.
+An experienced developer who has been on a team for three years knows which Confluence pages are outdated, which service has hidden dependencies, and why a particular integration was built the way it was. An agent does not have that implicit knowledge. It only sees the prompt and what is recorded in the repository.
 
-In many large organisations, that immediately exposes how scattered engineering knowledge has become. Half-maintained wikis and tribal agreements between squads are useless to an autonomous tool. If you want agents to produce dependable changes, the context they need has to live alongside the code in a clear, machine-readable form: an up-to-date `ARCHITECTURE.md`, explicit API schemas such as OpenAPI or protobuf definitions, clear module boundaries, and project-level instructions on local conventions and invariants.
+In many large organisations, this immediately exposes how fragmented technical documentation actually is. Half-maintained wikis and informal agreements between teams are unusable for an agent. If you want agents to deliver reliable changes, the relevant context must live inside the repository itself in a structured, readable form. Think of an up-to-date `ARCHITECTURE.md`, explicit API contracts such as OpenAPI or protobuf specifications, clear module boundaries, and documented project conventions.
 
-The better the repository explains its own structure and rules, the less an agent has to guess. Investing in that clarity is not busywork for AI; it is basic engineering hygiene that helps every new hire just as much.
+The better the codebase explains how the system fits together and which rules apply, the less an agent has to guess. Investing in that structure is not extra administration for AI; it is foundational maintenance that benefits every new colleague just as directly.
 
-## Let the platform handle the mechanical review
+## Let the platform run the standard checks
 
-No senior engineer stays sharp while reading hundreds of lines of generated boilerplate, routine migrations, or repetitive test code. By the third large pull request of the afternoon, attention drops and the subtle bugs that actually needed human judgment slip through.
+No senior engineer stays sharp while reading through hundreds of lines of generated boilerplate, standard migrations, or repetitive tests. After the third large pull request in a single afternoon, focus drops and the subtle issues that genuinely required human judgment slip through.
 
-The first filter should therefore belong to the platform, not a colleague. Before a pull request ever asks for a reviewer's time, the CI/CD pipeline should already have enforced formatting, type safety, SAST/DAST scans, service contract tests, and coverage on critical paths. Where appropriate, mutation testing and policy-as-code checks can tighten that net further.
+The first filter therefore belongs in the platform, not on a colleague's plate. Before a pull request ever reaches a reviewer, the CI/CD pipeline should already have strictly checked formatting, type safety, security scans (SAST/DAST), contract tests between services, and test coverage on critical paths. Where it adds value, mutation testing and policy-as-code can strengthen those checks further.
 
-Human review only makes sense once those automated gates are green. At that point the reviewer no longer needs to check whether the code follows basic rules, and can focus on what machines still judge poorly: whether the change solves the right business problem and leaves the architecture coherent.
+A substantive human review only makes sense once those automated checks pass. The reviewer then no longer needs to verify whether basic rules were followed, and can focus on what cannot be automated: does this change fit our architecture, and does it solve the right problem?
 
-## Match autonomy to the blast radius
+## Match autonomy to the risk profile
 
-The practical question is not whether you trust agents in general. It is how much freedom you grant for which kind of change. Separating work by risk makes that discussion much simpler.
+The core question is not whether you trust agents in general, but how much freedom you grant for which type of change. Making a clear distinction by risk makes that conversation much more practical.
 
-For contained tasks with a small blast radius, such as dependency bumps, internal cleanup inside a single module, or generating standard adapters behind a fixed interface, *human-on-the-loop* works well. As long as the automated test suite and policy checks pass, teams do not need a heavy manual approval cycle in the middle.
+For well-bounded tasks with limited risk, such as dependency updates, internal cleanup within a single module, or generating standard adapters behind a stable contract, *human-on-the-loop* is sufficient. As long as automated checks pass and the change stays within agreed boundaries, a heavy manual approval step is unnecessary.
 
-Core domain logic, authentication and authorisation flows, data migrations, and changes to public interfaces sit at the other end of the scale. Those require *human-in-the-loop*: an agent may prepare the patch, but a responsible engineer inspects and approves it before anything merges. Drawing that line forces leadership to be honest about which parts of the estate are genuinely critical and which teams have the test maturity and observability required to run with looser reins.
+As soon as a change touches core domain logic, authentication and authorisation, data migrations, or public interfaces, the bar is different. That requires *human-in-the-loop*: an agent can do the preparatory work, but an engineer reviews the change and explicitly approves it before merge. Drawing that boundary forces teams and management to specify which parts of the landscape are business-critical, and which teams have the test maturity and observability needed to give agents more room.
 
-## What engineering leaders should actually optimise for
+## What technical leaders should ultimately steer on
 
-It is tempting to report to the board how much faster teams generate code with agents. Yet very few enterprises are constrained by typing speed. They are constrained by unclear priorities, slow feedback loops, and systems that have grown too entangled to change safely.
+It is tempting to report to executives how much more code teams produce with agents. But more code per day is rarely the problem an enterprise is trying to solve. Most organisations are not bottlenecked by typing speed; they are slowed down by unclear priorities, slow feedback loops, and systems that have grown so entangled over the years that every change carries risk.
 
-Autonomous agents do not fix any of those on their own; they amplify whatever operating model is already there. In a messy environment with weak tests, they accumulate technical debt at higher speed. In an environment with clear architectural boundaries, trustworthy documentation in the repo, and strong platform guardrails, they take a meaningful share of routine execution off the team's plate. The real job for technical leadership is not rolling out the latest agent everywhere at once, but building an engineering organisation disciplined enough to speed up safely.
+Autonomous agents do not solve that on their own. They amplify the way of working that is already in place. In an unstructured environment with weak tests, they build up technical debt faster. In an environment with clear architectural boundaries, reliable documentation in the repository, and solid guardrails in the platform, they take a substantial amount of execution work off the team's hands. The task for technical leadership is therefore not to roll out the newest agent as quickly as possible, but to build an engineering organisation mature enough to accelerate with it safely.
