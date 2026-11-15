@@ -24,7 +24,7 @@ Cette évolution demande de repenser le rôle de l'ingénieur logiciel. Tant que
 
 Une bonne instruction donnée à un agent ressemble moins à une user story ouverte qu'à un contrat technique. Que faut-il modifier exactement, quelles interfaces doivent conserver leur compatibilité ascendante, quels scénarios d'erreur sont critiques et à quelles conditions le travail est-il considéré comme terminé ? Lorsque ce cadre fait défaut, le modèle comble lui-même les zones d'ombre.
 
-C'est pourquoi le pilotage par des indicateurs de volume — nombre de commits, tickets fermés ou story points — produit ici l'effet inverse. Il encourage la quantité au moment précis où l'organisation a besoin de précision dans la spécification et de rigueur dans la revue.
+C'est pourquoi le pilotage par des indicateurs de volume (nombre de commits, tickets fermés ou story points) produit ici l'effet inverse. Il encourage la quantité au moment précis où l'organisation a besoin de précision dans la spécification et de rigueur dans la revue.
 
 ## Le dépôt de code comme source centrale de connaissance
 
@@ -46,7 +46,7 @@ Une revue humaine approfondie n'a de sens qu'une fois l'ensemble de ces contrôl
 
 La question centrale n'est pas de savoir s'il faut faire confiance aux agents dans l'absolu, mais quelle marge de manœuvre leur accorder selon le type de modification. Distinguer clairement les tâches selon leur niveau de risque rend ce choix beaucoup plus concret.
 
-Pour des tâches bien circonscrites et à faible risque — mises à jour de dépendances, nettoyage interne au sein d'un module ou génération d'adaptateurs standards derrière un contrat stable — une approche *human-on-the-loop* est suffisante. Tant que les contrôles automatisés passent et que la modification reste dans le cadre défini, une validation manuelle lourde n'apporte rien.
+Pour des tâches bien circonscrites et à faible risque (mises à jour de dépendances, nettoyage interne au sein d'un module ou génération d'adaptateurs standards derrière un contrat stable), une approche *human-on-the-loop* est suffisante. Tant que les contrôles automatisés passent et que la modification reste dans le cadre défini, une validation manuelle lourde n'apporte rien.
 
 Dès que l'on touche à la logique métier centrale, à l'authentification et aux autorisations, aux migrations de données ou aux interfaces publiques, l'exigence change. On applique alors le principe du *human-in-the-loop* : l'agent peut réaliser le travail préparatoire, mais un ingénieur examine la modification et la valide explicitement avant toute fusion. Poser cette limite oblige les équipes et le management à définir clairement quelles parties du système sont critiques pour l'activité, et quelles équipes disposent d'une maturité de tests et d'une observabilité suffisantes pour accorder davantage d'autonomie aux agents.
 

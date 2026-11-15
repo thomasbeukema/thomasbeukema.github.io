@@ -5,28 +5,28 @@ draft: false
 translationKey: "product-mindset-ai-engineers"
 subject: "Stratégie de plateforme & leadership d'ingénierie"
 description: "Quand l'IA accélère l'écriture de code, le point de blocage passe de l'exécution à la direction. Les ingénieurs qui se contentent d'implémenter des tickets prennent du retard ; ceux qui gardent le problème net, non."
-summary: "Le produit décidait du quoi, les ingénieurs du comment — ce partage tenait tant que coder restait rare. Avec l'IA générative et les agents, la vitesse n'est plus le vrai problème. La question est de savoir si nous construisons les bonnes choses."
+summary: "Le produit décidait du quoi, les ingénieurs du comment. Ce partage tenait tant que coder restait rare. Avec l'IA générative et les agents, la vitesse n'est plus le vrai problème. La question est de savoir si nous construisons les bonnes choses."
 ---
 
 Pendant des années, la répartition des rôles dans le développement logiciel était claire. Les Product Owners et les business analysts décidaient *quoi* construire et *pourquoi* ; les ingénieurs décidaient *comment*. Avec de la profondeur technique et un code propre et scalable, votre valeur n'était pas en débat.
 
 Ce partage commence à coincer. L'IA générative et les agents de développement autonomes génèrent, refactorisent et testent du code en quelques secondes. La rareté dans une organisation d'ingénierie se déplace avec ça. Le facteur limitant n'est plus la vitesse à laquelle nous pouvons construire, mais le fait de construire les bonnes choses. Un product mindset n'est plus un privilège de PM. Il fait partie du métier de chaque ingénieur.
 
-## Le code n'est plus le goulot d'étranglement — le contexte et la direction le sont
+## Le contexte et la direction sont le goulot d'étranglement, pas le code
 
 La promesse du développement assisté par l'IA est connue : livrer plus vite, moins de boilerplate, des délais plus courts. Quiconque dirige une plateforme cloud ou un paysage applicatif d'envergure sait ce qui se passe quand cette vitesse tourne sans direction.
 
-Donnez des agents ou des copilotes à une équipe qui travaille purement au ticket — *construisez exactement ce qui est dans ce ticket Jira, ne posez pas de questions* — et vous n'obtenez pas de valeur. Vous obtenez plus vite un logiciel que personne n'attend, ou vous empilez de la dette technique à un rythme que plus personne ne voudra toucher ensuite.
+Donnez des agents ou des copilotes à une équipe qui travaille purement au ticket (*construisez exactement ce qui est dans ce ticket Jira, ne posez pas de questions*) et vous n'obtenez pas de valeur. Vous obtenez plus vite un logiciel que personne n'attend, ou vous empilez de la dette technique à un rythme que plus personne ne voudra toucher ensuite.
 
 Dès que le seuil pour construire quelque chose baisse, il devient plus important d'être critique *avant* que du code ne soit généré. Quel problème utilisateur ou plateforme résolvons-nous vraiment ? L'impact justifie-t-il la complexité architecturale ajoutée ? Pouvons-nous résoudre le problème sans nouveau code ?
 
-Ces questions relevaient traditionnellement du Product Owner. En pratique, elles atterrissent chez l'ingénieur qui emmène le change en production — et qui en reste responsable.
+Ces questions relevaient traditionnellement du Product Owner. En pratique, elles atterrissent chez l'ingénieur qui emmène le change en production, et qui en reste responsable.
 
 ## De l'implémentation à la curation et à la validation
 
 Autrefois, on valorisait surtout le savoir-faire dans l'implémentation. Avec l'IA, ce poids se déplace. Non pas parce que le code ne compte plus, mais parce que l'écrire différencie moins.
 
-L'IA peut construire une solution propre à un problème mal compris. Les ingénieurs qui comprennent le domaine, le client et la logique métier donnent à leurs outils et agents les bons cadres. Sans ces cadres, le modèle comble les trous lui-même — souvent avec des hypothèses que vous auriez bloquées en review.
+L'IA peut construire une solution propre à un problème mal compris. Les ingénieurs qui comprennent le domaine, le client et la logique métier donnent à leurs outils et agents les bons cadres. Sans ces cadres, le modèle comble les trous lui-même, souvent avec des hypothèses que vous auriez bloquées en review.
 
 En même temps, générer trois variantes d'architecture ou de fonctionnalité coûte à peine plus. La rareté n'est alors plus dans la fabrication, mais dans le choix : qu'est-ce qui apporte de la valeur utilisateur, qu'est-ce que cela fait aux coûts (FinOps), et qu'est-ce qui reste maintenable ? Davantage d'options ne rend pas ce choix plus facile ; cela le rend plus important.
 

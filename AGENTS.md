@@ -1,4 +1,4 @@
-# AGENTS.md — thomasbeukema.me
+# AGENTS.md: thomasbeukema.me
 
 Richtlijnen voor AI-agents en contributors. Doel: sitekwaliteit én tekstkwaliteit vasthouden.
 
@@ -6,9 +6,9 @@ Richtlijnen voor AI-agents en contributors. Doel: sitekwaliteit én tekstkwalite
 
 Persoonlijke CV- en essaysite van Thomas Beukema (`https://thomasbeukema.me/`). Hugo Extended + theme `nyt-cv`. Talen: **NL** (default, geen subpad), **EN** (`/en/`), **FR** (`/fr/`).
 
-Stem: engineering leadership, public cloud, product- en platformstrategie. Essayistisch en scherp — geen tutorial, geen marketingbrochure.
+Stem: engineering leadership, public cloud, product- en platformstrategie. Essayistisch en scherp: geen tutorial, geen marketingbrochure.
 
-## Architectuur — waar edit je wat
+## Architectuur: waar edit je wat
 
 | Laag | Pad | Regel |
 |------|-----|--------|
@@ -48,17 +48,19 @@ Hugo **Extended** is verplicht (image pipeline). CI pin: Hugo Extended 0.168.0.
 - Korte alinea’s. H2’s zijn stellingen (“Meer pull requests betekent nog geen hogere snelheid”), geen generieke labels (“Introductie”, “Conclusie”).
 - Mirror de toon van bestaande posts, o.a. `content/nl/blog/agentic-ai-developer-team.md`.
 - Teksten moeten lezen alsof Thomas ze zelf heeft geschreven. Haal alle duidelijke AI-giveaways eruit voordat je publiceert.
+- Geen emdashes (`—`) in blogposts, front matter of lopende proza. Gebruik een punt, komma, dubbele punt, haakjes of een gewone zinssplitsing. En-dashes (`–`) in CV-datums/titels mogen blijven.
 
-**Vermijd:** AI-clichés, buzzwordlijsten zonder argument, tutorial-toon, emoji, clickbait, LinkedIn-hype.
+**Vermijd:** AI-clichés, buzzwordlijsten zonder argument, tutorial-toon, emoji, clickbait, LinkedIn-hype, emdashes.
 
 **AI-giveaways (expliciet strippen):**
-- Carousel-structuur: “drie dimensies / eerste–tweede–derde” zonder echt argumentatief gewicht
+- Emdashes (`—`) als stilistisch tussenzin- of sloganmiddel
+- Carousel-structuur: “drie dimensies / eerste-tweede-derde” zonder echt argumentatief gewicht
 - Sloganparen en antitheses op sjabloon (“Zonder X… mét X…”, “Bouwen is goedkoop; kiezen blijft duur”)
 - Opgeblazen abstracties: “overlevingsvoorwaarde”, “bodem onder onze voeten”, “in het tijdperk van…”, “definitief onhoudbaar”
-- Te nette parallelle alinea’s, zware em-dash-asides, en LinkedIn-achtige punchlines als afsluiter
+- Te nette parallelle alinea’s en LinkedIn-achtige punchlines als afsluiter
 - Generieke “AI verandert alles”-framing zonder concrete organisatorische of platformdetail
 
-Schrijf liever oneven, concreet en observerend — zoals in `agentic-ai-developer-team.md`: specifieke situaties, werkprocessen en trade-offs, geen brochurezin.
+Schrijf liever oneven, concreet en observerend, zoals in `agentic-ai-developer-team.md`: specifieke situaties, werkprocessen en trade-offs, geen brochurezin.
 
 ### CV (`data/resume/`)
 
@@ -73,11 +75,11 @@ Verplicht op pagina’s: `title`, `description`, `translationKey`.
 
 Posts ook: `date`, `draft`, `subject`, `summary`.
 
-- `description` en `summary` zijn echte meta-teksten — geen herhaling van de titel.
+- `description` en `summary` zijn echte meta-teksten, geen herhaling van de titel.
 - `subject` staat niet in `archetypes/default.md`; vul het handmatig in (bijv. `"Platformstrategie & engineering leadership"`).
 - Nieuwe `translationKey`: descriptief en gelijk aan de slug. Kopieer niet het legacy-key `welcome-post`.
 
-## Meertaligheid — parity
+## Meertaligheid: parity
 
 1. Wijziging in één taal ⇒ dezelfde wijziging in de andere twee (padspiegel + zelfde `translationKey`).
 2. Vertalingen delen H2-structuur en argumentatie; geen machinevertaling-toon.
@@ -94,7 +96,7 @@ hugo new content content/fr/blog/my-post.md
 
 Zelfde bestandsnaam, zelfde `translationKey`, `draft: false` pas als alle drie talen klaar zijn.
 
-## Sitekwaliteit — design, SEO, a11y, print
+## Sitekwaliteit: design, SEO, a11y, print
 
 ### Design
 
@@ -134,7 +136,7 @@ Voor afronden van een wijziging:
 2. NL + EN + FR bestaan voor elke geraakte content-, CV- of i18n-wijziging.
 3. `translationKey`s koppelen de taalvarianten correct.
 4. Geen Engelse UI-lekken in NL/FR.
-5. Blogtoon matcht bestaande essays (geen AI-giveaways); CV-bullets zijn consistent per locale.
+5. Blogtoon matcht bestaande essays (geen AI-giveaways, geen emdashes); CV-bullets zijn consistent per locale.
 6. Home en print-CV niet door elkaar gehaald; theme-/sitemap-grenzen gerespecteerd.
 
 ## Anti-patronen
@@ -144,5 +146,5 @@ Voor afronden van een wijziging:
 - Page-templates toevoegen onder root `layouts/` i.p.v. het theme.
 - Design vervangen door generieke AI-/SaaS-esthetiek.
 - Teksten opschroeven met hype, emoji of clickbait.
-- AI-giveaways laten staan (carousel-opsommingen, sloganparen, abstracte hype) — teksten moeten klinken alsof Thomas ze zelf schreef.
+- AI-giveaways laten staan (emdashes, carousel-opsommingen, sloganparen, abstracte hype); teksten moeten klinken alsof Thomas ze zelf schreef.
 - `draft: true` laten staan op een “klare” post, of één taal publiceren zonder de andere twee.
