@@ -4,44 +4,42 @@ date: 2026-11-15
 draft: false
 translationKey: "product-mindset-ai-engineers"
 subject: "Platformstrategie & engineering leadership"
-description: "Als AI code schrijven tot commodity maakt, verschuift de schaarste van uitvoer naar richting. Een product mindset is daarmee geen PM-vaardigheid meer, maar een overlevingsvoorwaarde voor elke engineer."
-summary: "Jarenlang was de taakverdeling helder: product bepaalde wat, engineers hoe. Nu generatieve AI en coding agents de uitvoer versnellen, is de beperkende factor niet langer snelheid van bouwen, maar of we de juiste dingen bouwen."
+description: "Als AI het schrijven van code versnelt, verschuift het knelpunt van uitvoer naar richting. Engineers die alleen tickets implementeren, raken achterop; wie het probleem scherp houdt, niet."
+summary: "Product bepaalde wat, engineers hoe — die taakverdeling hield stand zolang code schrijven schaars was. Met generatieve AI en coding agents is snelheid niet langer het probleem. De vraag is of we de juiste dingen bouwen."
 ---
 
-Jarenlang was de taakverdeling in softwareontwikkeling overzichtelijk. Product Owners en business-analisten bepaalden *wat* er gebouwd moest worden en *waarom*; engineers bepaalden *hoe* dat technisch het beste gerealiseerd kon worden. Zolang je als developer diepgaande technische kennis had en schone, schaalbare code schreef, was je waarde onbetwist.
+Jarenlang was de taakverdeling in softwareontwikkeling helder. Product Owners en business-analisten bepaalden *wat* er gebouwd moest worden en *waarom*; engineers bepaalden *hoe*. Had je technische diepgang en schreef je nette, schaalbare code, dan stond je waarde niet ter discussie.
 
-In het tijdperk van generatieve AI en autonome coding agents schuift die bodem onder onze voeten vandaan. Wanneer code schrijven steeds meer een commodity wordt — iets wat agents in seconden genereren, refactoren en testen — verschuift de schaarste in een engineeringorganisatie radicaal. De beperkende factor is niet langer hoe snel we software kunnen bouwen, maar of we de juiste dingen bouwen. En dat maakt een product mindset geen exclusieve vaardigheid meer voor Product Managers, maar een overlevingsvoorwaarde voor elke engineer.
+Die verdeling begint te knellen. Generatieve AI en autonome coding agents genereren, refactoren en testen code in seconden. Daarmee verschuift de schaarste in een engineeringorganisatie. Niet hoe snel we kunnen bouwen is de beperkende factor, maar of we de juiste dingen bouwen. Een product mindset is daarmee geen PM-privilege meer. Het hoort bij het vak van elke engineer.
 
 ## Code is niet langer de bottleneck — context en richting wel
 
-De belofte van AI-assisted development is verleidelijk: hogere snelheid, minder boilerplate en kortere doorlooptijden. Maar iedereen die een groter cloudplatform of applicatielandschap leidt, weet dat pure uitvoeringssnelheid zonder richting gevaarlijk is.
+De belofte van AI-assisted development is bekend: sneller opleveren, minder boilerplate, kortere doorlooptijden. Wie een groter cloudplatform of applicatielandschap leidt, weet wat er gebeurt als die snelheid zonder richting wordt ingezet.
 
-Geef autonome agents of AI-copilots aan een team dat puur ticket-gedreven werkt — *bouw precies wat er in dit Jira-ticket staat zonder vragen te stellen* — en je krijgt geen waardecreatie. Je produceert alleen sneller software waar niemand op zit te wachten, of je bouwt in recordtempo aan complexe tech debt.
+Geef agents of copilots aan een team dat puur ticket-gedreven werkt — *bouw precies wat er in dit Jira-ticket staat, stel geen vragen* — en je krijgt geen waarde. Je krijgt sneller software waar niemand op zit te wachten, of je stapelt in hoog tempo tech debt op die later niemand meer durft aan te raken.
 
-Wanneer de technische drempel om iets te bouwen daalt, stijgt de waarde van het vermogen om kritisch te zijn voordat er één regel code wordt gegenereerd. Welk gebruikers- of platformprobleem lossen we hier eigenlijk mee op? Weegt de extra complexiteit in onze architectuur op tegen de daadwerkelijke impact? En kunnen we dit probleem oplossen zonder überhaupt nieuwe code toe te voegen?
+Zodra de drempel om iets te bouwen daalt, wordt het belangrijker om kritisch te zijn *vóór* er code wordt gegenereerd. Welk gebruikers- of platformprobleem lossen we hiermee op? Rechtvaardigt de impact de extra complexiteit in de architectuur? Kunnen we het probleem oplossen zonder nieuwe code?
 
-Die vragen horen niet langer alleen bij de Product Owner. Ze horen bij elke engineer die de verantwoordelijkheid neemt voor wat er uiteindelijk in productie belandt.
+Die vragen lagen traditioneel bij de Product Owner. In de praktijk belanden ze bij de engineer die de change naar productie brengt — en die daar ook verantwoordelijk voor blijft.
 
 ## Van implementeren naar cureren en valideren
 
-In een traditionele setting wordt een engineer vaak gewaardeerd om vakmanschap in de implementatie. In een AI-gedreven team verschuift dat vakmanschap naar drie andere dimensies.
+Vroeger lag de waardering vooral op vakmanschap in de implementatie. Met AI verschuift dat gewicht. Niet omdat code er niet meer toe doet, maar omdat het schrijven ervan minder onderscheidend wordt.
 
-De eerste is probleemdefinitie en domeinbegrip. AI kan een uitstekende oplossing bouwen voor een slecht begrepen probleem. Engineers die het domein, de klant en de businesslogica doorgronden, kunnen de juiste kaders en constraints meegeven aan hun tooling en agents. Zonder die scherpte vult het model de open plekken zelf in — en zelden met de trade-offs die jij zou hebben gemaakt.
+AI kan een nette oplossing bouwen voor een slecht begrepen probleem. Engineers die het domein, de klant en de businesslogica snappen, geven tooling en agents de juiste kaders mee. Ontbreken die kaders, dan vult het model de gaten zelf — meestal met aannames die jij in een review had tegengehouden.
 
-De tweede is scherpe trade-offs maken. Als het genereren van drie verschillende architectuur- of feature-varianten nauwelijks nog extra ontwikkeltijd kost, wordt het vermogen om keuzes te maken op basis van gebruikerswaarde, kosten (FinOps) en onderhoudbaarheid de echte kerncompetentie. Bouwen is goedkoop geworden; kiezen blijft duur.
+Tegelijk kost het nauwelijks meer tijd om drie architectuur- of featurevarianten te laten genereren. De schaarste zit dan niet in het maken, maar in het kiezen: wat levert gebruikerswaarde op, wat doet het met kosten (FinOps), en wat blijft onderhoudbaar? Meer opties maken die keuze niet makkelijker; ze maken haar belangrijker.
 
-De derde is sturen op outcome in plaats van output. In een wereld waarin pull requests en commits door AI vertienvoudigen, zegt output niets meer over voortgang. Een engineer met een product mindset kijkt voorbij de merge: wordt de feature gebruikt, neemt de frictie voor andere teams af, en verbetert de stabiliteit of conversie?
+En als pull requests en commits door AI toenemen, zeggen outputmetrics weinig meer. Commits, gesloten tickets en story points belonen volume. Een engineer met productinstinct kijkt voorbij de merge: wordt de feature gebruikt, daalt de frictie voor andere teams, verbetert stabiliteit of conversie?
 
 ## Wat dit betekent voor interne platforms
 
-Deze verschuiving geldt net zo goed voor teams die bouwen aan interne cloudplatforms en infrastructuur. Ook daar neemt AI een groot deel van het standaardwerk over: het schrijven van Terraform-modules, CI/CD-pipelines of migratiescripts gaat vele malen sneller.
+Hetzelfde speelt bij interne cloudplatforms en infrastructuur. Terraform-modules, CI/CD-pipelines en migratiescripts schrijven gaat met AI een stuk sneller. Dat haalt het excuus weg om platformwerk als ticketfabriek te runnen.
 
-Juist daardoor verdwijnt het excuus om platformwerk als een uitvoerende ticketfabriek te runnen. Platform engineers moeten hun eigen werk benaderen als een product voor interne developers: continu onderzoeken waar de echte frictie in de developer experience zit, welke guardrails teams daadwerkelijk versnellen en waar standaardisatie waarde toevoegt — en waar die juist remt.
-
-Een platform zonder productinstinct bouwt sneller meer tooling. Een platform mét productinstinct bouwt minder, maar juist dat wat teams verder brengt.
+Platform engineers moeten hun werk behandelen als een product voor interne developers. Waar zit de echte frictie in de developer experience? Welke guardrails versnellen teams echt, en welke standaardisatie remt juist af? Sneller meer tooling opleveren is makkelijk geworden. Minder opleveren, maar precies dat wat teams verder brengt, vraagt productkeuzes.
 
 ## De nieuwe lat voor technisch talent
 
-De scheidslijn tussen "de business" en "IT" was altijd al kunstmatig, maar in het tijdperk van AI wordt die definitief onhoudbaar. Engineers die zich blijven verschuilen achter puur technische specificaties en wachten tot iemand anders het probleem voor hen uitkauwt, dreigen ingehaald te worden door de snelheid van de technologie zelf.
+Het onderscheid tussen "de business" en "IT" was altijd al geforceerd. Met AI wordt wachten tot iemand anders het probleem voor je uitkauwt een riskante houding. Engineers die zich blijven verschuilen achter puur technische specificaties, raken achterop bij collega's die wél doorvragen.
 
-De meest waardevolle engineers van de komende jaren zijn niet degenen die het snelst code kunnen typen of de nieuwste AI-prompts kennen. Het zijn de engineers die technische diepgang combineren met een scherp productinstinct — mensen die niet alleen vragen *hoe* we iets bouwen, maar vooral durven doorvragen *waarom*.
+De engineers die ertoe doen, zijn niet degenen die het snelst typen of de nieuwste prompts kennen. Het zijn degenen die technische diepgang combineren met productinstinct: niet alleen *hoe* we iets bouwen, maar vooral *waarom*.
