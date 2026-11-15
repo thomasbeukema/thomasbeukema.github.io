@@ -47,8 +47,18 @@ Hugo **Extended** is verplicht (image pipeline). CI pin: Hugo Extended 0.168.0.
 - Register: eerste persoon / “wij”-essay. Probleem → organisatorische implicatie → concreet advies.
 - Korte alinea’s. H2’s zijn stellingen (“Meer pull requests betekent nog geen hogere snelheid”), geen generieke labels (“Introductie”, “Conclusie”).
 - Mirror de toon van bestaande posts, o.a. `content/nl/blog/agentic-ai-developer-team.md`.
+- Teksten moeten lezen alsof Thomas ze zelf heeft geschreven. Haal alle duidelijke AI-giveaways eruit voordat je publiceert.
 
 **Vermijd:** AI-clichés, buzzwordlijsten zonder argument, tutorial-toon, emoji, clickbait, LinkedIn-hype.
+
+**AI-giveaways (expliciet strippen):**
+- Carousel-structuur: “drie dimensies / eerste–tweede–derde” zonder echt argumentatief gewicht
+- Sloganparen en antitheses op sjabloon (“Zonder X… mét X…”, “Bouwen is goedkoop; kiezen blijft duur”)
+- Opgeblazen abstracties: “overlevingsvoorwaarde”, “bodem onder onze voeten”, “in het tijdperk van…”, “definitief onhoudbaar”
+- Te nette parallelle alinea’s, zware em-dash-asides, en LinkedIn-achtige punchlines als afsluiter
+- Generieke “AI verandert alles”-framing zonder concrete organisatorische of platformdetail
+
+Schrijf liever oneven, concreet en observerend — zoals in `agentic-ai-developer-team.md`: specifieke situaties, werkprocessen en trade-offs, geen brochurezin.
 
 ### CV (`data/resume/`)
 
@@ -124,7 +134,7 @@ Voor afronden van een wijziging:
 2. NL + EN + FR bestaan voor elke geraakte content-, CV- of i18n-wijziging.
 3. `translationKey`s koppelen de taalvarianten correct.
 4. Geen Engelse UI-lekken in NL/FR.
-5. Blogtoon matcht bestaande essays; CV-bullets zijn consistent per locale.
+5. Blogtoon matcht bestaande essays (geen AI-giveaways); CV-bullets zijn consistent per locale.
 6. Home en print-CV niet door elkaar gehaald; theme-/sitemap-grenzen gerespecteerd.
 
 ## Anti-patronen
@@ -134,4 +144,5 @@ Voor afronden van een wijziging:
 - Page-templates toevoegen onder root `layouts/` i.p.v. het theme.
 - Design vervangen door generieke AI-/SaaS-esthetiek.
 - Teksten opschroeven met hype, emoji of clickbait.
+- AI-giveaways laten staan (carousel-opsommingen, sloganparen, abstracte hype) — teksten moeten klinken alsof Thomas ze zelf schreef.
 - `draft: true` laten staan op een “klare” post, of één taal publiceren zonder de andere twee.
