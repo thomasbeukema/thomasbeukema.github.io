@@ -5,28 +5,28 @@ draft: false
 translationKey: "product-mindset-ai-engineers"
 subject: "Platform strategy & engineering leadership"
 description: "As AI speeds up writing code, the bottleneck shifts from execution to direction. Engineers who only implement tickets fall behind; those who keep the problem sharp do not."
-summary: "Product decided what, engineers decided how — that split held while writing code was scarce. With generative AI and coding agents, speed is no longer the hard part. The question is whether we are building the right things."
+summary: "Product decided what, engineers decided how. That split held while writing code was scarce. With generative AI and coding agents, speed is no longer the hard part. The question is whether we are building the right things."
 ---
 
 For years, the division of labour in software development was clear. Product Owners and business analysts decided *what* needed to be built and *why*; engineers decided *how*. If you had technical depth and wrote clean, scalable code, your value was not in doubt.
 
 That split is starting to strain. Generative AI and autonomous coding agents generate, refactor and test code in seconds. Scarcity inside an engineering organisation moves with that. The limiting factor is no longer how fast we can build, but whether we are building the right things. A product mindset is no longer a PM privilege. It belongs to every engineer's craft.
 
-## Code is no longer the bottleneck — context and direction are
+## Context and direction are the bottleneck, not code
 
 The promise of AI-assisted development is familiar: ship faster, less boilerplate, shorter lead times. Anyone who leads a larger cloud platform or application landscape knows what happens when that speed runs without direction.
 
-Give agents or copilots to a team that works purely ticket-driven — *build exactly what is in this Jira ticket, do not ask questions* — and you do not get value. You get unwanted software faster, or you pile up technical debt at a pace no one later wants to touch.
+Give agents or copilots to a team that works purely ticket-driven (*build exactly what is in this Jira ticket, do not ask questions*) and you do not get value. You get unwanted software faster, or you pile up technical debt at a pace no one later wants to touch.
 
 Once the barrier to building something drops, being critical *before* code is generated matters more. Which user or platform problem does this actually solve? Does the impact justify the added architectural complexity? Can we solve it without new code?
 
-Those questions traditionally sat with the Product Owner. In practice they land with the engineer who takes the change to production — and stays accountable for it.
+Those questions traditionally sat with the Product Owner. In practice they land with the engineer who takes the change to production, and stays accountable for it.
 
 ## From implementing to curating and validating
 
 Engineers used to be valued mainly for craftsmanship in implementation. With AI, that weight shifts. Not because code no longer matters, but because writing it is less differentiating.
 
-AI can build a clean solution to a poorly understood problem. Engineers who understand the domain, the customer and the business logic give tooling and agents the right constraints. Without those constraints, the model fills the gaps itself — usually with assumptions you would have blocked in review.
+AI can build a clean solution to a poorly understood problem. Engineers who understand the domain, the customer and the business logic give tooling and agents the right constraints. Without those constraints, the model fills the gaps itself, usually with assumptions you would have blocked in review.
 
 At the same time, generating three architecture or feature variants barely costs extra. Scarcity is then not in making options, but in choosing: what delivers user value, what does it do to cost (FinOps), and what stays maintainable? More options do not make that choice easier; they make it more important.
 
