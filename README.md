@@ -1,6 +1,8 @@
 # thomasbeukema.me
 
-Personal CV and blog for Thomas Beukema. Built with [Hugo](https://gohugo.io/), multilingual (NL / EN / FR), with a New York Times–inspired theme. Printing the CV homepage produces a clean A4 PDF.
+Personal CV and blog for Thomas Beukema. Built with [Hugo](https://gohugo.io/), multilingual (NL / EN / FR), with a New York Times–inspired theme. Printing the CV page (`/cv`) produces a clean A4 PDF.
+
+Agent guidelines: see [AGENTS.md](AGENTS.md).
 
 ## Requirements
 
@@ -14,15 +16,15 @@ hugo server
 
 Open http://localhost:1313/
 
-| Language | Home (CV) | Blog |
-|----------|-----------|------|
-| Nederlands (default) | http://localhost:1313/ | http://localhost:1313/blog/ |
-| English | http://localhost:1313/en/ | http://localhost:1313/en/blog/ |
-| Français | http://localhost:1313/fr/ | http://localhost:1313/fr/blog/ |
+| Language | Home | CV | Blog |
+|----------|------|-----|------|
+| Nederlands (default) | http://localhost:1313/ | http://localhost:1313/cv/ | http://localhost:1313/blog/ |
+| English | http://localhost:1313/en/ | http://localhost:1313/en/cv/ | http://localhost:1313/en/blog/ |
+| Français | http://localhost:1313/fr/ | http://localhost:1313/fr/cv/ | http://localhost:1313/fr/blog/ |
 
 ## Export CV as PDF
 
-1. Open the CV homepage in the language you want (`/`, `/en/`, or `/fr/`).
+1. Open the CV page in the language you want (`/cv`, `/en/cv/`, or `/fr/cv/`).
 2. Use the browser **Print** dialog (⌘P / Ctrl+P).
 3. Choose **Save as PDF**, paper size **A4**.
 4. Disable headers/footers in the print dialog if your browser adds them.
